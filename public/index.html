@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bono Click Rush</title>
+<link rel="stylesheet" href="/public/style.css" />
+</head>
+<body>
+<main class="container">
+<header>
+<h1>보노보노 클릭 러시</h1>
+<p class="tagline">10초 동안 보노보노를 탭해서 팀 점수를 올리세요!</p>
+</header>
+
+
+<section id="auth" class="card">
+<h2>로그인</h2>
+<div class="row">
+<input id="nickname" maxlength="16" placeholder="닉네임" />
+<button id="btnSignup">시작하기</button>
+</div>
+<p class="hint">최초 1회 닉네임 설정 후 자동 로그인됩니다.</p>
+</section>
+
+
+<section id="status" class="card hidden">
+<div class="row spread">
+<div>팀: <strong id="team"></strong></div>
+<div>닉네임: <strong id="me"></strong></div>
+</div>
+<button id="btnStart" class="primary">오늘의 10초 시작</button>
+<p id="limitMsg" class="warn hidden">오늘 참여는 완료되었습니다. 내일 다시 도전!</p>
+</section>
+
+
+<section id="game" class="card hidden">
+<div id="timer">10.00</div>
+<img id="bono" src="/public/bono.png" alt="보노보노" />
+<div id="count">0</div>
+</section>
+
+
+<section id="leaderboards" class="card">
+<h2>리더보드</h2>
+<div class="row">
+<button id="tabDaily" class="tab active">일간</button>
+<button id="tabWeekly" class="tab">주간</button>
+</div>
+<div class="grid">
+<div>
+<h3>개인 Top 20</h3>
+<ol id="lbUsers"></ol>
+</div>
+<div>
+<h3>팀 순위</h3>
+<ol id="lbTeams"></ol>
+</div>
+</div>
+</section>
+
+
+<footer>
+<small>© 2025 Bono Click Rush • HTML5 최적화: 모바일 탭 우선, GPU가속 이미지, 요청 최소화</small>
+</footer>
+</main>
+
+
+<script src="/public/app.js"></script>
+</body>
+</html>
